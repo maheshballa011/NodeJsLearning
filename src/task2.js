@@ -3,23 +3,37 @@
  **/
 const csv=require('csvtojson');
 const fs=require('fs');
-const csvFilePath='./csv/node_mentoring_t1_2_input_example.csv'
+const { pipeline } = require('stream');
+
+const csvFilePath='./csv/node_mentoring_t1_2_input_example.csv';
+
+function readCSVLineByLine(){
+    pipeline(
+        fs.ReadStream(csvFilePath),
+        csv(),
+        fs.createWriteStream('csv/lineCSV.txt'),
+        (err) => {
+          if (err) {
+            console.error('Writing to text file failed', err);
+          } else {
+            console.log('Writing to text file succeeded.');
+          }
+        }
+      );
+}
 
 async function readCSV(){
     const jsonArray=await csv().fromFile(csvFilePath);
-    console.log(jsonArray);
     writeToTxt(jsonArray);
 }
 
 function writeToTxt(data){
-    var txtFile = fs.createWriteStream('csv.txt');
-    console.log(data);
+    var txtFile = fs.createWriteStream('csv/fullLoadCSV.txt');
     data.forEach(row => {
-        txtFile.write(JSON.stringify(row)+', '+ '\n');
+        txtFile.write(JSON.stringify(row)+''+ '\n');
     });
     txtFile.end();
 }
 
 readCSV();
-// writeToTxt(csvData);
-
+readCSVLineByLine();

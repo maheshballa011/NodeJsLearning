@@ -7,7 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon --exec babel-node src/task1.js",
     "build": "babel src --out-dir dist",
-    "serve": "node dist/task1.js"
+    "serve": "node dist/task1.js",
+    "task1": "nodemon src/task1.js",
+    "task2": "nodemon src/task2.js",
+    "task3": "nodemon dist/task3.js"
   },
   "repository": {
     "type": "git",
@@ -27,6 +30,7 @@
     "@babel/cli": "^7.7.4",
     "@babel/core": "^7.7.4",
     "@babel/node": "^7.7.4",
+    "@babel/polyfill": "^7.7.0",
     "@babel/preset-env": "^7.7.4",
     "nodemon": "^2.0.1"
   }
