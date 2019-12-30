@@ -2,6 +2,7 @@ const express = require('express');
 const uuidv4 = require('uuid/v4');
 const Joi = require('@hapi/joi');
 
+//validating for userschema
 const userSchema = Joi.object({
     login: Joi.string()
         .required(),
