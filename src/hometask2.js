@@ -79,6 +79,10 @@ function getAutoSuggestUsers(loginSubstring, limit){
     return _users.slice(0, limit);
 }
 
+/**
+ * 
+ * @param {*} schemaErrors 
+ */
 function errorResponse(schemaErrors){
 
     const errors = schemaErrors.map(error=>{
