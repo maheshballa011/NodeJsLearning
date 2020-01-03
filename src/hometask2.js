@@ -61,6 +61,11 @@ let users = [
     }
 ];
 
+/**
+ * 
+ * @param {*} loginSubstring 
+ * @param {*} limit 
+ */
 function getAutoSuggestUsers(loginSubstring, limit){
     let _users = users.filter(user => {
         return user.login.indexOf(loginSubstring) !== -1 && !user.isDeleted;
