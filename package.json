@@ -11,7 +11,8 @@
     "task1": "nodemon src/task1.js",
     "task2": "nodemon src/task2.js",
     "task3": "nodemon dist/task3.js",
-    "hometask2": "nodemon src/hometask2.js"
+    "hometask2": "nodemon src/hometask2.js",
+    "hometask3": "nodemon src/hometask3/hometask3.js"
   },
   "repository": {
     "type": "git",
@@ -25,10 +26,18 @@
   },
   "homepage": "https://github.com/maheshballa011/NodeJsLearning#readme",
   "dependencies": {
+    "uuid": "^3.3.3",
     "@hapi/joi": "^16.1.8",
+    "babel-eslint": "^10.0.3",
+    "cors": "^2.8.5",
     "csvtojson": "^2.0.10",
     "express": "^4.17.1",
-    "uuid": "^3.3.3"
+    "express-joi-validation": "^4.0.3",
+    "joi": "^14.3.1",
+    "path": "^0.12.7",
+    "pg": "^7.17.1",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^5.21.3"
   },
   "devDependencies": {
     "@babel/cli": "^7.7.4",

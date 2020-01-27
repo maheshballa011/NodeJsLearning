@@ -2,6 +2,7 @@ const express = require('express');
 const uuidv4 = require('uuid/v4');
 const Joi = require('@hapi/joi');
 
+//validating for userschema
 const userSchema = Joi.object({
     login: Joi.string()
         .required(),
@@ -28,6 +29,7 @@ const app = express();
 
 const port = '3030';
 
+//users mock data
 let users = [
     {
         "id": 1,
@@ -59,6 +61,11 @@ let users = [
     }
 ];
 
+/**
+ * 
+ * @param {*} loginSubstring 
+ * @param {*} limit 
+ */
 function getAutoSuggestUsers(loginSubstring, limit){
     let _users = users.filter(user => {
         return user.login.indexOf(loginSubstring) !== -1 && !user.isDeleted;
@@ -72,6 +79,10 @@ function getAutoSuggestUsers(loginSubstring, limit){
     return _users.slice(0, limit);
 }
 
+/**
+ * 
+ * @param {*} schemaErrors 
+ */
 function errorResponse(schemaErrors){
 
     const errors = schemaErrors.map(error=>{
