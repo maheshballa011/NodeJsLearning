@@ -13,7 +13,8 @@
     "task3": "nodemon dist/task3.js",
     "hometask2": "nodemon src/hometask2.js",
     "hometask3": "nodemon src/hometask3/hometask3.js",
-    "hometask4": "nodemon src/hometask4/hometask4.js"
+    "hometask4": "nodemon src/hometask4/hometask4.js",
+    "hometask5": "nodemon src/hometask5/hometask5.js"
   },
   "repository": {
     "type": "git",
@@ -39,7 +40,8 @@
     "pg": "^7.17.1",
     "pg-hstore": "^2.3.3",
     "sequelize": "^5.21.3",
-    "sequelize-cli": "^5.5.1"
+    "sequelize-cli": "^5.5.1",
+    "winston": "^3.2.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.7.4",
