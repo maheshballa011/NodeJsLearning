@@ -4,14 +4,18 @@
   "description": "Node Js Practice from scratch",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "nodemon --exec babel-node src/task1.js",
     "build": "babel src --out-dir dist",
     "serve": "node dist/task1.js",
     "task1": "nodemon src/task1.js",
     "task2": "nodemon src/task2.js",
     "task3": "nodemon dist/task3.js",
-    "hometask2": "nodemon src/hometask2.js"
+    "hometask2": "nodemon src/hometask2.js",
+    "hometask3": "nodemon src/hometask3/hometask3.js",
+    "hometask4": "nodemon src/hometask4/hometask4.js",
+    "hometask5": "nodemon src/hometask5/hometask5.js",
+    "hometask7": "nodemon src/hometask5/hometask5.js"
   },
   "repository": {
     "type": "git",
@@ -24,18 +28,33 @@
     "url": "https://github.com/maheshballa011/NodeJsLearning/issues"
   },
   "homepage": "https://github.com/maheshballa011/NodeJsLearning#readme",
-  "dependencies": {
-    "@hapi/joi": "^16.1.8",
-    "csvtojson": "^2.0.10",
-    "express": "^4.17.1",
-    "uuid": "^3.3.3"
-  },
   "devDependencies": {
-    "@babel/cli": "^7.7.4",
-    "@babel/core": "^7.7.4",
-    "@babel/node": "^7.7.4",
-    "@babel/polyfill": "^7.7.0",
-    "@babel/preset-env": "^7.7.4",
-    "nodemon": "^2.0.1"
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^6.7.2",
+    "jest": "^25.1.0",
+    "nodemon": "^2.0.0"
+  },
+  "dependencies": {
+    "@babel/plugin-transform-runtime": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "@babel/runtime": "^7.9.2",
+    "@hapi/joi": "^16.1.8",
+    "acorn": "^7.1.1",
+    "babel-eslint": "^10.0.3",
+    "cors": "^2.8.5",
+    "csvtojson": "^2.0.10",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-joi-validation": "^4.0.3",
+    "joi": "^14.3.1",
+    "jsonwebtoken": "^8.5.1",
+    "minimist": "^1.2.5",
+    "path": "^0.12.7",
+    "pg": "^7.17.1",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^5.21.3",
+    "sequelize-cli": "^5.5.1",
+    "winston": "^3.2.1"
   }
 }
