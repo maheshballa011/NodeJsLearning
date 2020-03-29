@@ -14,7 +14,8 @@
     "hometask2": "nodemon src/hometask2.js",
     "hometask3": "nodemon src/hometask3/hometask3.js",
     "hometask4": "nodemon src/hometask4/hometask4.js",
-    "hometask5": "nodemon src/hometask5/hometask5.js"
+    "hometask5": "nodemon src/hometask5/hometask5.js",
+    "hometask7": "nodemon src/hometask5/hometask5.js"
   },
   "repository": {
     "type": "git",
