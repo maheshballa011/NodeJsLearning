@@ -4,7 +4,7 @@
   "description": "Node Js Practice from scratch",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "nodemon --exec babel-node src/task1.js",
     "build": "babel src --out-dir dist",
     "serve": "node dist/task1.js",
