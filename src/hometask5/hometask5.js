@@ -5,6 +5,7 @@ const suggestRoutes = require("./api/suggestionRoutes");
 const userRoutes = require("./api/userRoutes");
 const groupRoutes = require("./api/groupRoutes");
 const userGroupRoutes = require("./api/userGroupRoutes");
+const loginRoutes = require("./api/loginRoutes");
 const logger = require('./middleware/logger');
 const errorHandler = require('./middleware/errorHandler');
 const winstonLogger = require('./middleware/winstonLogger');
