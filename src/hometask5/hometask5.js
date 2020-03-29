@@ -8,6 +8,7 @@ const userGroupRoutes = require("./api/userGroupRoutes");
 const logger = require('./middleware/logger');
 const errorHandler = require('./middleware/errorHandler');
 const winstonLogger = require('./middleware/winstonLogger');
+const jwtValidator = require("./middleware/jwtValidator");
 
 const sequelize = require('./database/models').sequelize;
 
@@ -17,10 +18,11 @@ const PORT = process.env.PORT || "3001";
 
 app.use(bodyParser.json());
 app.use(logger);
+app.use(cors(corsOptions));
 
-
-app.use('/users', suggestRoutes);
-app.use('/user', userRoutes);
+app.use("/login", loginRoutes);
+app.use("/users", jwtValidator, suggestRoutes);
+app.use("/user", jwtValidator, userRoutes);
 app.use('/group', groupRoutes);
 app.use("/usergroup",userGroupRoutes)
 app.use(errorHandler);
